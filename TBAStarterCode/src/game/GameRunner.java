@@ -1,16 +1,18 @@
 package game;
 
-import items.Item;
-import rooms.*;
-import people.Person;
-
 import java.util.Scanner;
+
+import items.Item;
+import rooms.Hallway;
+import rooms.Room;
+
+
 
 public class GameRunner {
 
     public static void main (String[] args)
     {
-        Room[][] map = new Room[5][5];
+        Room[][] map = new Room[8][8];
         for (int j = 0; j<map.length; j++)
         {
         	Room[] row = map[j];
@@ -25,7 +27,7 @@ public class GameRunner {
 
         }
 
-        School tech = new School(map);
+        Room escape = new Room(map);
 
 
         boolean gameOn = true;
@@ -33,13 +35,14 @@ public class GameRunner {
         Scanner in = new Scanner(System.in);
         while(gameOn)
         {
-            System.out.println("Welcome to the Halls of Tech, " + player1.getFirstName());
+            System.out.println("Welcome to the Escape Room, " + player1.getFirstName());
+            System.out.println("Do you have what it takes to escape?");
             map[0][0].addOccupant(player1);
 
-            tech.printMap();
+            escape.printMap();
             player1.printRoom();
             String move = player1.chooseMove();
-            Utilities.movePlayer(tech, player1,move);
+            Utilities.movePlayer(escape, player1,move);
            // gameOn = false;
             
 
@@ -52,6 +55,11 @@ public class GameRunner {
         }
 		in.close();
     }
+
+	public static void gameOff() {
+		// TODO Auto-generated method stub
+		
+	}
 
 }
 

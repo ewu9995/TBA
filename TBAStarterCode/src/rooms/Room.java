@@ -1,6 +1,6 @@
 package rooms;
 
-import people.Person;
+import game.Person;
 import items.Item;
 
 import java.util.Arrays;
@@ -55,6 +55,16 @@ public abstract class Room {
     	return y;
     }
     public abstract void print();
+
+	public void enterRoom(Person x) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void printMap() {
+		// TODO Auto-generated method stub
+		
+	}
 
 
 
