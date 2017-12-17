@@ -6,6 +6,10 @@ public class Person {
 
 	private String name;
 
+	public Person() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public void setRoom(Room room) {
 		// TODO Auto-generated method stub
 		

@@ -31,7 +31,7 @@ public class Board {
         return map;
     }
 
-    public void setSchoolMap(Room[][] map) {
+    public void setMap(Room[][] map) {
         this.map = map;
     }
 
