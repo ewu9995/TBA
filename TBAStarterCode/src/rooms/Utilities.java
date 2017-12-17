@@ -1,5 +1,7 @@
 package rooms;
 
+import board.Board;
+import game.Person;
 import rooms.Room;
 
 public class Utilities {
@@ -9,8 +11,7 @@ public class Utilities {
 		return null;
 	}
 
-	public static void movePlayer(Room escape, Person player1, String move) {
-		// TODO Auto-generated method stub
+	public static void movePlayer(Board escape, Person player1, String move) {
 		
 	}
 

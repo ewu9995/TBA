@@ -66,6 +66,11 @@ public abstract class Room {
 		
 	}
 
+	public void leaveRoom(Person p) {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 
 

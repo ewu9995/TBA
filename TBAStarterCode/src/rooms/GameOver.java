@@ -2,13 +2,13 @@ package rooms;
 
 import game.GameRunner;
 import items.Item;
-import rooms.Person;
+import game.Person;
 
 public class GameOver extends Room{
 
 	private static final String yLoc = null;
 	private Object xLoc;
-	private rooms.Person occupant;
+	private game.Person occupant;
 	
 	
 	public GameOver(boolean[] doors, Person[] people, Item[] items, int x, int y) {

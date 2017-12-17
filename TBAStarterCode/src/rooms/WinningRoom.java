@@ -2,7 +2,7 @@ package rooms;
 
 import game.GameRunner;
 import items.Item;
-import rooms.Person;
+import game.Person;
 
 public class WinningRoom extends Room {
 

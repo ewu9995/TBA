@@ -9,9 +9,9 @@ public class Board {
 
 
 
-    public Board(Room[][] schoolMap)
+    public Board(Room[][] map)
     {
-        this.map = schoolMap;
+        this.map = map;
     }
 
     public void printMap()
@@ -27,11 +27,11 @@ public class Board {
             System.out.println();
         }
     }
-    public Room[][] getSchoolMap() {
+    public Room[][] getMap() {
         return map;
     }
 
-    public void setSchoolMap(Room[][] schoolMap) {
+    public void setSchoolMap(Room[][] map) {
         this.map = map;
     }
 

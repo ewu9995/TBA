@@ -4,18 +4,19 @@ import java.util.Scanner;
 
 import items.Item;
 import rooms.Hallway;
-import rooms.Person;
+import rooms.*;
+import game.Person;
 import rooms.Room;
+import rooms.Rooms;
 import rooms.Utilities;
+import board.Board;
 
 
 
 
 public class GameRunner {
 
-	private static boolean gameOn = true;
-    
-	public static void main (String[] args)
+    public static void main (String[] args)
     {
         Room[][] map = new Room[8][8];
         for (int j = 0; j<map.length; j++)
@@ -32,7 +33,7 @@ public class GameRunner {
 
         }
 
-        Room escape = new Room(map);
+       Board escape = new Board(map);
 
 
         boolean gameOn = true;
@@ -51,73 +52,19 @@ public class GameRunner {
            // gameOn = false;
             
 
-        	boolean validMove(String move1, Person p, Room[][] map)
-        	{
-        		move = move.toLowerCase().trim();
-        		switch (move) {
-        			case "n":
-        				if (p.getxLoc() > 0)
-        				{
-        					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
-        					map[p.getxLoc()-1][p.getyLoc()].enterRoom(p);
-        					return true;
-        				}
-        				else
-        				{
-        					return false;
-        				}
-        			case "e":
-        				if (p.getyLoc()< map[p.getyLoc()].length -1)
-        				{
-        					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
-        					map[p.getxLoc()][p.getyLoc() + 1].enterRoom(p);
-        					return true;
-        				}
-        				else
-        				{
-        					return false;
-        				}
 
-        			case "s":
-        				if (p.getxLoc() < map.length - 1)
-        				{
-        					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
-        					map[p.getxLoc()+1][p.getyLoc()].enterRoom(p);
-        					return true;
-        				}
-        				else
-        				{
-        					return false;
-        				}
 
-        			case "w":
-        				if (p.getyLoc() > 0)
-        				{
-        					map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
-        					map[p.getxLoc()][p.getyLoc()-1].enterRoom(p);
-        					return true;
-        				}
-        				else
-        				{
-        					return false;
-        				}
-        			default:
-        				break;
-        					
-        		}
-        		return true;
-        	}
+
+
+
 
         }
 		in.close();
     }
 
 	public static void gameOff() {
-		gameOn = false;
+		// TODO Auto-generated method stub
 		
 	}
 
 }
-
-
-
