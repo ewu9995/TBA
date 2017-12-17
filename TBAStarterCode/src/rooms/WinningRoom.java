@@ -1,12 +1,16 @@
+package rooms;
+
 import game.GameRunner;
-import game.Person;
+import items.Item;
+import rooms.Person;
 
 public class WinningRoom extends Room {
 
-
-
+	private Person occupant;
+	private Object xLoc;
+	private String yLoc;
 	public WinningRoom(boolean[] doors, Person[] occupants, Item[] items, int x, int y) {
-		super(doors, people, items, x, y);
+		super(doors, occupants, items, x, y);
 		// TODO Auto-generated constructor stub
 	}
 	@Override

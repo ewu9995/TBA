@@ -1,4 +1,4 @@
-package game;
+package rooms;
 
 import rooms.Room;
 
@@ -20,6 +20,21 @@ public abstract class Person {
 	}
 
 	public String getFirstName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void setxLoc(Object xLoc) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setyLoc(String yLoc) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public char[] print() {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -1,9 +1,16 @@
 package rooms;
 
-import game.Person;
+import game.GameRunner;
+import items.Item;
+import rooms.Person;
 
 public class GameOver extends Room{
 
+	private static final String yLoc = null;
+	private Object xLoc;
+	private rooms.Person occupant;
+	
+	
 	public GameOver(boolean[] doors, Person[] people, Item[] items, int x, int y) {
 		super(doors, people, items, x, y);
 		// TODO Auto-generated constructor stub
@@ -21,7 +28,7 @@ public class GameOver extends Room{
 				" | |__| |/ ____ \\| |  | | |____  | |__| | \\  /  | |____| | \\ \\ \r\n" + 
 				"  \\_____/_/    \\_\\_|  |_|______|  \\____/   \\/   |______|_|  \\_\\");
 		System.out.println("  Uh-oh, you've fell into a trap and have died. Maybe start over?");
-		Runner.gameOff();
+		GameRunner.gameOff();
 	}
 	@Override
 	public void print() {
