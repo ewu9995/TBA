@@ -18,6 +18,12 @@ public class Utilities {
 		return new Person ();
 	}
 
+	private String name;
+	public String getFirstName() {
+		// TODO Auto-generated method stub
+		return name;
+	}
+
 	public static void movePlayer(Board escape, Person player1, String move) {
 		
 	}
